@@ -5,17 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Portafolio personal de Pedro Ariza, estudiante de Ingeniería en Sistemas y Computación.">
+    <meta name="description" content="Portafolio profesional de Pedro Ariza, estudiante de Ingeniería en Sistemas y Computación.">
 
-    <title>Pedro Ariza | Portafolio</title>
+    <meta name="theme-color" content="#080b14">
 
-    <!-- Estilos CSS -->
+    <title>Pedro Ariza | Developer Portfolio</title>
+
     <link rel="stylesheet" href="css/styles.css">
+
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
 
-    <!-- Navegación -->
+    <!-- ENCABEZADO Y NAVEGACIÓN -->
+
     <header class="header">
         <nav class="navbar container">
 
@@ -23,194 +27,433 @@
                 Pedro<span>.</span>
             </a>
 
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+            <button class="menu-toggle"
+                    id="menu-toggle"
+                    aria-label="Abrir menú"
+                    aria-expanded="false"
+                    aria-controls="nav-links">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+                <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+                <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
             </ul>
 
         </nav>
     </header>
 
+
     <main>
 
-        <!-- Presentación -->
-        <section id="inicio" class="hero container">
+        <!-- PRESENTACIÓN PRINCIPAL -->
+
+        <section class="hero container" id="inicio">
 
             <div class="hero-content">
 
-                <p class="greeting">Hola, soy Pedro Ariza</p>
+                <div class="status">
+                    <span class="status-dot"></span>
+                    Estudiante de Ingeniería en Sistemas
+                </div>
+
+                <p class="eyebrow">HOLA, SOY PEDRO ARIZA</p>
 
                 <h1>
-                    Estudiante de
-                    <span>Ingeniería en Sistemas y Computación</span>
+                    Construyendo soluciones
+                    <span class="gradient-text">a través de la tecnología.</span>
                 </h1>
 
                 <p class="hero-description">
-                    Me interesa la programación, la inteligencia artificial,
-                    el análisis de datos y el desarrollo de soluciones
-                    tecnológicas.
+                    Me apasiona la programación, la inteligencia artificial
+                    y el análisis de datos. Exploro nuevas tecnologías
+                    y desarrollo proyectos para convertir ideas en soluciones.
                 </p>
 
-                <div class="hero-buttons">
-                    <a href="#proyectos" class="btn primary">
-                        Ver mis proyectos
+                <div class="hero-actions">
+                    <a href="#proyectos" class="btn btn-primary">
+                        Explorar proyectos
+                        <span>↗</span>
                     </a>
 
-                    <a href="#contacto" class="btn secondary">
-                        Contactarme
+                    <a href="#sobre-mi" class="btn btn-outline">
+                        Conocer más
                     </a>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://github.com/Pedro6094"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        GitHub ↗
+                    </a>
+
+                    <span class="social-divider">/</span>
+
+                    <span>Panamá</span>
                 </div>
 
             </div>
 
-            <div class="hero-decoration">
-                <div class="code-card">
-                    <p>developer.py</p>
-                    <pre><code>class Pedro:
 
-    def __init__(self):
-        self.interests = [
-            "Python",
-            "Artificial Intelligence",
-            "Data Science"
-        ]
+            <!-- VENTANA DECORATIVA DE CÓDIGO -->
 
-    def learn(self):
-        return "Always learning"</code></pre>
+            <div class="hero-visual">
+
+                <div class="glow glow-one"></div>
+                <div class="glow glow-two"></div>
+
+                <div class="code-window">
+
+                    <div class="window-header">
+                        <div class="window-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <span class="window-title">developer.py</span>
+                    </div>
+
+                    <div class="code-content">
+
+                        <p><span class="code-purple">class</span>
+                           <span class="code-yellow">Developer</span>:</p>
+
+                        <p class="indent">
+                            <span class="code-purple">def</span>
+                            <span class="code-blue">__init__</span>(self):
+                        </p>
+
+                        <p class="indent-double">
+                            self.name =
+                            <span class="code-green">"Pedro"</span>
+                        </p>
+
+                        <p class="indent-double">
+                            self.role =
+                            <span class="code-green">"Student"</span>
+                        </p>
+
+                        <p class="indent-double">
+                            self.languages = [
+                        </p>
+
+                        <p class="indent-triple code-green">
+                            "Python", "C#", "SQL"
+                        </p>
+
+                        <p class="indent-double">]</p>
+
+                        <br>
+
+                        <p class="indent">
+                            <span class="code-purple">def</span>
+                            <span class="code-blue">learn</span>(self):
+                        </p>
+
+                        <p class="indent-double">
+                            <span class="code-purple">return</span>
+                            <span class="code-green">"Always growing..."</span>
+                        </p>
+
+                        <br>
+
+                        <p class="code-comment">
+                            # Building the future, one line at a time.
+                        </p>
+
+                    </div>
+
+                    <div class="code-footer">
+                        <span>● Python</span>
+                        <span>UTF-8</span>
+                    </div>
+
                 </div>
-            </div>
-
-        </section>
-
-        <!-- Sobre mí -->
-        <section id="sobre-mi" class="section container">
-
-            <h2>Sobre mí</h2>
-
-            <p>
-                Soy estudiante de Ingeniería en Sistemas y Computación.
-                Me apasiona aprender sobre tecnología, programación
-                y desarrollo de software.
-
-                Actualmente estoy fortaleciendo mis conocimientos
-                mediante proyectos académicos y personales.
-                Mi objetivo es desarrollar soluciones tecnológicas
-                y continuar creciendo profesionalmente.
-            </p>
-
-        </section>
-
-        <!-- Habilidades -->
-        <section id="habilidades" class="section container">
-
-            <h2>Áreas de conocimiento</h2>
-
-            <div class="skills-grid">
-
-                <article class="skill-card">
-                    <h3>Programación</h3>
-                    <p>Python y C#</p>
-                </article>
-
-                <article class="skill-card">
-                    <h3>Bases de datos</h3>
-                    <p>SQL y gestión de datos</p>
-                </article>
-
-                <article class="skill-card">
-                    <h3>Ingeniería de software</h3>
-                    <p>UML y modelado de sistemas</p>
-                </article>
-
-                <article class="skill-card">
-                    <h3>Inteligencia artificial</h3>
-                    <p>Machine Learning y redes neuronales</p>
-                </article>
-
-                <article class="skill-card">
-                    <h3>Análisis de datos</h3>
-                    <p>Python, Pandas y visualización</p>
-                </article>
-
-                <article class="skill-card">
-                    <h3>Desarrollo web</h3>
-                    <p>HTML, CSS y JavaScript</p>
-                </article>
-
-                <article class="skill-card">
-                    <h3>Modelado 3D</h3>
-                    <p>Blender</p>
-                </article>
 
             </div>
 
         </section>
 
-        <!-- Proyectos -->
-        <section id="proyectos" class="section container">
 
-            <h2>Mis proyectos</h2>
+        <!-- SOBRE MÍ -->
 
-            <p class="section-description">
-                Aquí presentaré mis proyectos académicos y personales,
-                incluyendo sus objetivos, tecnologías y resultados.
-            </p>
+        <section class="section container" id="sobre-mi">
+
+            <div class="section-heading">
+                <span class="section-number">01 / SOBRE MÍ</span>
+                <h2>Conociendo un poco más</h2>
+            </div>
+
+            <div class="about-content">
+
+                <div class="about-text">
+                    <h3>Aprender, experimentar y crear.</h3>
+
+                    <p>
+                        Soy estudiante de Ingeniería en Sistemas y
+                        Computación, interesado en comprender cómo funciona
+                        la tecnología y cómo utilizarla para resolver
+                        problemas del mundo real.
+                    </p>
+
+                    <p>
+                        Mi formación académica me permite explorar distintas
+                        áreas como el desarrollo de software, las bases de
+                        datos, la inteligencia artificial y el análisis
+                        de datos.
+                    </p>
+
+                    <p>
+                        Considero que aprender constantemente y desarrollar
+                        proyectos prácticos son fundamentales para crecer
+                        como profesional.
+                    </p>
+                </div>
+
+                <div class="about-highlight">
+
+                    <div class="highlight-icon">⌘</div>
+
+                    <h3>Siempre aprendiendo</h3>
+
+                    <p>
+                        Transformando conocimientos en proyectos
+                        y experiencias.
+                    </p>
+
+                    <div class="highlight-line"></div>
+
+                    <span>Ingeniería · Tecnología · Innovación</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- HABILIDADES -->
+
+        <section class="section section-alt" id="habilidades">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-number">02 / HABILIDADES</span>
+                    <h2>Áreas de conocimiento</h2>
+
+                    <p>
+                        Tecnologías y disciplinas que forman parte
+                        de mi aprendizaje.
+                    </p>
+                </div>
+
+
+                <div class="skills-grid">
+
+                    <article class="skill-card">
+                        <div class="skill-icon">Py</div>
+                        <h3>Python</h3>
+                        <p>Programación, automatización y análisis de datos.</p>
+                        <span>PROGRAMMING</span>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-icon">C#</div>
+                        <h3>C#</h3>
+                        <p>Programación orientada a objetos y aplicaciones.</p>
+                        <span>PROGRAMMING</span>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-icon">DB</div>
+                        <h3>SQL</h3>
+                        <p>Consultas, modelado y gestión de bases de datos.</p>
+                        <span>DATABASES</span>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-icon">AI</div>
+                        <h3>Inteligencia artificial</h3>
+                        <p>Fundamentos de IA y aprendizaje automático.</p>
+                        <span>ARTIFICIAL INTELLIGENCE</span>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-icon">DA</div>
+                        <h3>Análisis de datos</h3>
+                        <p>Procesamiento, exploración y visualización de datos.</p>
+                        <span>DATA ANALYSIS</span>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-icon">WEB</div>
+                        <h3>Desarrollo web</h3>
+                        <p>Creación de páginas con HTML, CSS y JavaScript.</p>
+                        <span>WEB DEVELOPMENT</span>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-icon">UML</div>
+                        <h3>Ingeniería de software</h3>
+                        <p>Análisis, diseño y modelado de sistemas.</p>
+                        <span>SOFTWARE ENGINEERING</span>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-icon">3D</div>
+                        <h3>Blender</h3>
+                        <p>Modelado tridimensional y animación digital.</p>
+                        <span>3D DESIGN</span>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROYECTOS -->
+
+        <section class="section container" id="proyectos">
+
+            <div class="section-heading">
+                <span class="section-number">03 / PORTAFOLIO</span>
+                <h2>Proyectos destacados</h2>
+
+                <p>
+                    Una selección de trabajos académicos y personales.
+                    Próximamente iré incorporando nuevos proyectos.
+                </p>
+            </div>
+
 
             <div class="projects-grid">
 
                 <article class="project-card">
-                    <h3>Proyecto de Python</h3>
+
+                    <div class="project-top">
+                        <span class="project-category">PROGRAMMING</span>
+                        <span class="project-symbol">⌘</span>
+                    </div>
+
+                    <h3>Desarrollo con Python</h3>
+
                     <p>
-                        Espacio reservado para documentar un proyecto
-                        desarrollado con Python.
+                        Proyectos de programación, procesamiento de
+                        información y resolución de problemas mediante Python.
                     </p>
-                    <span>Python</span>
+
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Programming</span>
+                    </div>
+
+                    <a href="https://github.com/Pedro6094"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="project-link">
+                        Explorar GitHub ↗
+                    </a>
+
                 </article>
 
-                <article class="project-card">
-                    <h3>Sistema en C#</h3>
-                    <p>
-                        Espacio reservado para presentar una aplicación
-                        desarrollada con C#.
-                    </p>
-                    <span>C#</span>
-                </article>
 
                 <article class="project-card">
+
+                    <div class="project-top">
+                        <span class="project-category">SOFTWARE</span>
+                        <span class="project-symbol">⌘</span>
+                    </div>
+
+                    <h3>Aplicaciones en C#</h3>
+
+                    <p>
+                        Desarrollo de aplicaciones utilizando programación
+                        orientada a objetos, validaciones e interfaces gráficas.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>C#</span>
+                        <span>.NET</span>
+                    </div>
+
+                    <a href="https://github.com/Pedro6094"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="project-link">
+                        Explorar GitHub ↗
+                    </a>
+
+                </article>
+
+
+                <article class="project-card">
+
+                    <div class="project-top">
+                        <span class="project-category">DATA SCIENCE</span>
+                        <span class="project-symbol">⌘</span>
+                    </div>
+
                     <h3>Análisis de datos</h3>
+
                     <p>
-                        Espacio reservado para mostrar un proyecto
-                        de análisis y visualización de datos.
+                        Exploración y visualización de información
+                        mediante herramientas del ecosistema Python.
                     </p>
-                    <span>Python · Pandas</span>
+
+                    <div class="project-tags">
+                        <span>Pandas</span>
+                        <span>Python</span>
+                    </div>
+
+                    <a href="https://github.com/Pedro6094"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="project-link">
+                        Explorar GitHub ↗
+                    </a>
+
                 </article>
 
             </div>
 
         </section>
 
-        <!-- Contacto -->
-        <section id="contacto" class="section container">
 
-            <h2>Contacto</h2>
+        <!-- CONTACTO -->
 
-            <p>
-                ¿Te interesa conocer mis proyectos o colaborar
-                en alguna iniciativa tecnológica?
-            </p>
+        <section class="section contact-section" id="contacto">
 
-            <div class="contact-links">
+            <div class="container contact-content">
+
+                <span class="section-number">04 / CONTACTO</span>
+
+                <h2>
+                    ¿Construimos algo
+                    <span class="gradient-text">interesante?</span>
+                </h2>
+
+                <p>
+                    Estoy interesado en aprender, compartir conocimientos
+                    y explorar nuevas oportunidades relacionadas
+                    con la tecnología.
+                </p>
 
                 <a href="https://github.com/Pedro6094"
                    target="_blank"
-                   rel="noopener noreferrer">
-                    GitHub
+                   rel="noopener noreferrer"
+                   class="btn btn-primary">
+                    Visitar mi GitHub ↗
                 </a>
-
-                <!-- Agregar correo y LinkedIn posteriormente -->
 
             </div>
 
@@ -218,15 +461,29 @@
 
     </main>
 
-    <!-- Pie de página -->
-    <footer class="footer">
-        <p>
-            © 2026 Pedro Ariza. Todos los derechos reservados.
-        </p>
-    </footer>
 
-    <!-- JavaScript -->
-    <script src="js/script.js"></script>
+    <!-- PIE DE PÁGINA -->
+
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <a href="#inicio" class="logo">
+                Pedro<span>.</span>
+            </a>
+
+            <p>
+                Diseñado y desarrollado por Pedro Ariza.
+            </p>
+
+            <p class="copyright">
+                © <span id="current-year">2026</span>
+                Todos los derechos reservados.
+            </p>
+
+        </div>
+
+    </footer>
 
 </body>
 </html>
